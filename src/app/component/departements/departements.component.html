@@ -1,1 +1,17 @@
-<p>departements works!</p>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Nom</th>
+      <th scope="col">Supprimer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let departement of departements">
+      <td>{{departement.libelle}}</td>
+      <td>
+          <button (click)="onRemoveDepartement(departement.iddepartement)" class="btn btn-primary">Supprimer</button>
+
+      </td>
+    </tr>
+  </tbody>
+</table>

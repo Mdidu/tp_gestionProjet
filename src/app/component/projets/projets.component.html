@@ -1,1 +1,26 @@
-<p>projets works!</p>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Nom client</th>
+      <th scope="col">Code</th>
+      <th scope="col">Titre</th>
+      <th scope="col">Type</th>
+      <th scope="col">Description</th>
+      <th scope="col">Date début</th>
+      <th scope="col">Date fin estimée</th>
+      <th scope="col">Date fin réel</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let projet of projets">
+      <td>{{projet.client}}</td>
+      <td>{{projet.code}}</td>
+      <td>{{projet.titre}}</td>
+      <td>{{projet.type}}</td>
+      <td>{{projet.description}}</td>
+      <td>{{projet.datedebut  | date:'shortDate'}}</td>
+      <td>{{projet.datefinestimee  | date:'shortDate'}}</td>
+      <td>{{projet.datefinreel  | date:'shortDate'}}</td>
+    </tr>
+  </tbody>
+</table>
