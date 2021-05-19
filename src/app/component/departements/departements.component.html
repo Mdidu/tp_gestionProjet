@@ -9,8 +9,10 @@
     <tr *ngFor="let departement of departements">
       <td>{{departement.libelle}}</td>
       <td>
-          <button (click)="onRemoveDepartement(departement.iddepartement)" class="btn btn-primary">Supprimer</button>
-
+        <button (click)="onRemoveDepartement(departement.iddepartement)" class="btn btn-primary">Supprimer</button>
+      </td>
+      <td>
+        <a routerLink="../update/{{departement.iddepartement}}" class="btn btn-primary">Modifier</a>
       </td>
     </tr>
   </tbody>

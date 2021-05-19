@@ -14,9 +14,6 @@ import { AddProjetComponent } from './component/projets/add/add-projet/add-proje
 import { UpdateProjetComponent } from './component/projets/update/update-projet/update-projet.component';
 import { AddEmployeComponent } from './component/employes/add/add-employe/add-employe.component';
 import { UpdateEmployeComponent } from './component/employes/update/update-employe/update-employe.component';
-import { DeleteEmployeComponent } from './component/employes/delete/delete-employe/delete-employe.component';
-import { DeleteProjetComponent } from './component/projets/delete/delete-projet/delete-projet.component';
-import { DeleteDepartementComponent } from './component/departements/delete/delete-departement/delete-departement.component';
 import { AddDepartementComponent } from './component/departements/add/add-departement/add-departement.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -35,10 +32,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     AddProjetComponent,
     UpdateProjetComponent,
     AddEmployeComponent,
-    UpdateEmployeComponent,
-    DeleteEmployeComponent,
-    DeleteProjetComponent,
-    DeleteDepartementComponent
+    UpdateEmployeComponent
   ],
   imports: [
     BrowserModule,

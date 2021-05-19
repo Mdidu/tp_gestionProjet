@@ -20,7 +20,7 @@ export class AddDepartementComponent implements OnInit {
   }
 
   onSubmit() {
-    const data =this.addDepartementForm.value;
+    const data = this.addDepartementForm.value;
 
     this.departementService.add(data);
   }

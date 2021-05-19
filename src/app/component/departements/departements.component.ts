@@ -9,8 +9,9 @@ import { DepartementsService } from 'src/app/service/departements/departements.s
 })
 export class DepartementsComponent implements OnInit {
 
-  // supprimerDepartementForm: FormGroup;
+  // updateDepartementForm: FormGroup;
   // @Input() iddepartement: any;
+  // @Input() libelle: any;
   departements: any;
 
   constructor(private formBuilder: FormBuilder, public departementService: DepartementsService) {
@@ -19,8 +20,9 @@ export class DepartementsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.supprimerDepartementForm =this.formBuilder.group({
-    //   iddepartement: [this.iddepartement, Validators.required]
+    // this.updateDepartementForm =this.formBuilder.group({
+    //   iddepartement: [this.iddepartement, Validators.required],
+    //   libelle: [this.libelle, Validators.required],
     // });
   }
 
@@ -44,4 +46,7 @@ export class DepartementsComponent implements OnInit {
         this.displayDepartement();
       }, 1000);
   }
+  // onSubmitUpdate() {
+  //   console.log("ues");
+  // }
 }

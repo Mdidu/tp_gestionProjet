@@ -1,1 +1,21 @@
-<p>update-departement works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+      <div class="card card-signin my-5">
+        <div class="card-body">
+          <h5 class="card-title text-center">Entrez le département à ajouter</h5>
+          <form *ngIf="updateDepartementForm" class="form-signin" [formGroup]="updateDepartementForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+              <input type="hidden" formControlName="iddepartement" class="form-control col-sm-10" id="iddepartement" placeholder="Entrez nom du département" />
+            </div>
+            <div class="form-group">
+              <label for="libelle">Nom :</label>
+              <input type="text" formControlName="libelle" class="form-control col-sm-10" id="libelle" placeholder="Entrez nom du département" />
+            </div>
+            <button type="submit" [disabled]="updateDepartementForm.invalid" class="btn btn-primary">Envoyer</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
