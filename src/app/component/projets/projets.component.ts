@@ -11,17 +11,30 @@ export class ProjetsComponent implements OnInit {
   projets: any;
 
   constructor(public projetService: ProjetsService) {
-      projetService.findAll().subscribe(
-        (projets) => {
-          this.projets = projets;
-        },
-        (error) => {
-          console.log("error=" + error.message);
-        }
-      );
+      this.displayProjet();
      }
 
   ngOnInit(): void {
   }
 
+  displayProjet() {
+    this.projets = this.projetService.findAll().subscribe(
+      (projets) => {
+        this.projets = projets;
+      },
+      (error) => {
+        console.log("error=" + error.message);
+      }
+    );
+  }
+
+  onRemoveProjet(id: number) {
+    this.projetService.remove(id);
+
+    setTimeout(
+      () => {
+
+        this.displayProjet();
+      }, 1000);
+  }
 }

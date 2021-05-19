@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
+import { ProjetsService } from 'src/app/service/projets/projets.service';
 
 @Component({
   selector: 'app-update-projet',
@@ -7,9 +10,46 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UpdateProjetComponent implements OnInit {
 
-  constructor() { }
+  updateProjetForm: FormGroup;
+  projet: any;
+
+  constructor(private formBuilder: FormBuilder, public projetService: ProjetsService, private route:ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.recupData();
+
+    setTimeout(() => {
+      this.form();
+    }, 1000);
   }
 
+  form() {
+    this.updateProjetForm = this.formBuilder.group({
+      idprojet: [this.projet.idprojet, Validators.required],
+      client: [this.projet.client, Validators.required],
+      code: [this.projet.code, Validators.required],
+      titre: [this.projet.titre, Validators.required],
+      type: [this.projet.type, Validators.required],
+      description: [this.projet.description, Validators.required],
+      datedebut: [new Date(this.projet.datedebut), Validators.required],
+      datefinestimee: [this.projet.datefinestimee, Validators.required],
+      datefinreel: [this.projet.datefinreel]
+    });
+  }
+  recupData() {
+    const id = this.route.snapshot.paramMap.get('id');
+    this.projet = this.projetService.findById(id).subscribe(
+      (projet) => {
+        this.projet = projet;
+      },
+      (error) => {
+        console.log("error = " + error.message);
+      }
+    );
+  }
+
+  onSubmit() {
+    const data = this.updateProjetForm.value;
+    this.projetService.update(data);
+  }
 }

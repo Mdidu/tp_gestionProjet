@@ -14,7 +14,7 @@ export class AddDepartementComponent implements OnInit {
   constructor(private formBuilder: FormBuilder, public departementService: DepartementsService) { }
 
   ngOnInit(): void {
-    this.addDepartementForm =this.formBuilder.group({
+    this.addDepartementForm = this.formBuilder.group({
       libelle: ['', Validators.required]
     });
   }

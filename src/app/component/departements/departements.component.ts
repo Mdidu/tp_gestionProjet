@@ -46,7 +46,4 @@ export class DepartementsComponent implements OnInit {
         this.displayDepartement();
       }, 1000);
   }
-  // onSubmitUpdate() {
-  //   console.log("ues");
-  // }
 }

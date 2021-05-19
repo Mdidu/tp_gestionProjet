@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ProjetsService } from 'src/app/service/projets/projets.service';
 
 @Component({
   selector: 'app-add-projet',
@@ -7,9 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddProjetComponent implements OnInit {
 
-  constructor() { }
+  addProjetForm: FormGroup;
+
+  constructor(private formBuilder: FormBuilder, public projetService: ProjetsService) { }
 
   ngOnInit(): void {
+    this.addProjetForm = this.formBuilder.group({
+      client: ['', Validators.required],
+      code: ['', Validators.required],
+      titre: ['', Validators.required],
+      type: ['', Validators.required],
+      description: ['', Validators.required],
+      datedebut: ['', Validators.required],
+      datefinestimee: ['', Validators.required],
+      datefinreel: ['', Validators.required]
+    });
   }
 
+  onSubmit() {
+    const data = this.addProjetForm.value;
+    console.log(data);
+    this.projetService.add(data);
+  }
 }
