@@ -81,15 +81,13 @@ export class AddEmployeComponent implements OnInit {
   }
   onSubmit() {
     const data = this.addEmployeForm.value;
-    // this.test.prenom = data.prenom;
+
     this.depart = {
-      iddepartement: parseInt(data.iddepartement),
-      libelle: 'aa'
+      iddepartement: parseInt(data.iddepartement)
     };
 
     this.role = {
-      idrole: parseInt(data.idrole),
-      libelle: 'aa'
+      idrole: parseInt(data.idrole)
 
     };
 
@@ -98,7 +96,6 @@ export class AddEmployeComponent implements OnInit {
     };
 
     this.emp = {
-      id: 1,
       prenom: data.prenom,
       nom: data.nom,
       mail: data.mail,
@@ -107,18 +104,9 @@ export class AddEmployeComponent implements OnInit {
       projet: this.proj,
       role: this.role
     }
-    console.log(data.nom);
-    // this.test.nom = data.nom;
-    // console.log(this.test.nom);
-    // this.test.mail = data.mail;
-    // this.test.pwd = data.pwd;
-    // this.test.departement.iddepartement = parseInt(data.iddepartement);
-    // this.test.projet.idprojet = parseInt(data.idprojet);
-    // this.test.role.idrole = parseInt(data.idrole);
+
     console.log(this.emp);
-    // data.idprojet = parseInt(data.idprojet);
-    // console.log(data);
-    // console.log(this.test);
+
     this.employeService.add(this.emp);
   }
 }

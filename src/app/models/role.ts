@@ -1,4 +1,4 @@
 export class Role {
-  idrole: number;
-  libelle: string;
+  idrole?: number;
+  libelle?: string;
 }
