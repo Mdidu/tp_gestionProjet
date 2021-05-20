@@ -8,6 +8,7 @@ import { EmployesService } from 'src/app/service/employes/employes.service';
 import { ProjetsService } from 'src/app/service/projets/projets.service';
 import { RolesService } from 'src/app/service/roles/roles.service';
 import { Role } from 'src/app/models/role';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-employe',
@@ -29,7 +30,8 @@ export class AddEmployeComponent implements OnInit {
     public employeService: EmployesService,
     public departementService: DepartementsService,
     public projetService: ProjetsService,
-    public roleService: RolesService) { }
+    public roleService: RolesService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.recupDataDepartement();
@@ -49,6 +51,7 @@ export class AddEmployeComponent implements OnInit {
       idrole: ['', Validators.required]
     });
   }
+
   recupDataDepartement() {
     this.departements = this.departementService.findAll().subscribe(
       (departements) => {
@@ -59,6 +62,7 @@ export class AddEmployeComponent implements OnInit {
       }
     );
   }
+
   recupDataProjet() {
     this.projets = this.projetService.findAll().subscribe(
       (projets) => {
@@ -69,6 +73,7 @@ export class AddEmployeComponent implements OnInit {
       }
     );
   }
+
   recupDataRole() {
     this.roles = this.roleService.findAll().subscribe(
       (roles) => {
@@ -79,6 +84,7 @@ export class AddEmployeComponent implements OnInit {
       }
     );
   }
+
   onSubmit() {
     const data = this.addEmployeForm.value;
 
@@ -88,7 +94,6 @@ export class AddEmployeComponent implements OnInit {
 
     this.role = {
       idrole: parseInt(data.idrole)
-
     };
 
     this.proj = {
@@ -103,9 +108,7 @@ export class AddEmployeComponent implements OnInit {
       departement: this.depart,
       projet: this.proj,
       role: this.role
-    }
-
-    console.log(this.emp);
+    };
 
     this.employeService.add(this.emp);
   }

@@ -8,7 +8,7 @@ import 'rxjs/add/operator/map';
 })
 export class ProjetsService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
   public findById(id: string | null) {
     return this.http.get<any>("http://localhost:8082/gestionProjetBack/projet/read/"+ id)
@@ -20,7 +20,6 @@ export class ProjetsService {
   public findAll() {
     return this.http.get<any>("http://localhost:8082/gestionProjetBack/projet/read")
     .map(res => {
-      console.log(res);
       return res;
     })
   }
@@ -28,8 +27,7 @@ export class ProjetsService {
   public add(data: any) {
     return this.http.post("http://localhost:8082/gestionProjetBack/projet/add", data).subscribe(
       () => {
-        // ce rediriger vers la page liste
-        console.log("yes");
+        this.router.navigate(['projet/list']);
       }
     );
   }
@@ -37,17 +35,14 @@ export class ProjetsService {
   public update(data: any) {
     return this.http.put("http://localhost:8082/gestionProjetBack/projet/update", data).subscribe(
       () => {
-        // ce rediriger vers la page liste
-        console.log(data);
+        this.router.navigate(['projet/list']);
       }
     );
   }
 
   public remove(id: number) {
     return this.http.delete("http://localhost:8082/gestionProjetBack/projet/delete/" + id).subscribe(
-      () => {
-        console.log("yes");
-      }
+      () => {}
     );
   }
 }

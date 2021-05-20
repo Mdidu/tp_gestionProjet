@@ -36,6 +36,7 @@ export class UpdateProjetComponent implements OnInit {
       datefinreel: [this.projet.datefinreel]
     });
   }
+
   recupData() {
     const id = this.route.snapshot.paramMap.get('id');
     this.projet = this.projetService.findById(id).subscribe(

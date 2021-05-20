@@ -12,9 +12,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class DepartementsService {
 
-  // public departement: Departement;
-
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
   public findById(id: string | null) {
     return this.http.get<any>("http://localhost:8082/gestionProjetBack/departement/read/"+ id)
@@ -33,8 +31,7 @@ export class DepartementsService {
   public add(data: any) {
     return this.http.post("http://localhost:8082/gestionProjetBack/departement/add", data).subscribe(
       () => {
-        // ce rediriger vers la page liste
-        console.log("yes");
+        this.router.navigate(['departement/list']);
       }
     );
   }
@@ -42,17 +39,14 @@ export class DepartementsService {
   public update(data: any) {
     return this.http.put("http://localhost:8082/gestionProjetBack/departement/update", data).subscribe(
       () => {
-        // ce rediriger vers la page liste
-        console.log(data);
+        this.router.navigate(['departement/list']);
       }
     );
   }
 
   public remove(id: number) {
     return this.http.delete("http://localhost:8082/gestionProjetBack/departement/delete/" + id).subscribe(
-      () => {
-        console.log("yes");
-      }
+      () => {}
     );
   }
 
