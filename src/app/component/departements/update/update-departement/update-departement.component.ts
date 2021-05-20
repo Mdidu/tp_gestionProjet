@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
-import { Departement } from 'src/app/models/departement';
 import { DepartementsService } from 'src/app/service/departements/departements.service';
 
 @Component({

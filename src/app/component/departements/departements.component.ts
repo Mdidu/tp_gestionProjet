@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder} from '@angular/forms';
 import { DepartementsService } from 'src/app/service/departements/departements.service';
 
 @Component({
@@ -9,9 +9,6 @@ import { DepartementsService } from 'src/app/service/departements/departements.s
 })
 export class DepartementsComponent implements OnInit {
 
-  // updateDepartementForm: FormGroup;
-  // @Input() iddepartement: any;
-  // @Input() libelle: any;
   departements: any;
 
   constructor(private formBuilder: FormBuilder, public departementService: DepartementsService) {
@@ -20,10 +17,6 @@ export class DepartementsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.updateDepartementForm =this.formBuilder.group({
-    //   iddepartement: [this.iddepartement, Validators.required],
-    //   libelle: [this.libelle, Validators.required],
-    // });
   }
 
   displayDepartement() {

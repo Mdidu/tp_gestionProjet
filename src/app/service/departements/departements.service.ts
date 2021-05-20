@@ -1,10 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Observable, Subscription } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { Departement } from 'src/app/models/departement';
-import { Subject } from 'rxjs';
 import 'rxjs/add/operator/map';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 
 @Injectable({

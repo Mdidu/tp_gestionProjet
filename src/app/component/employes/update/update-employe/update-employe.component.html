@@ -28,21 +28,21 @@
               <label class="mr-sm-2" for="iddepartement">Departement :</label>
               <select formControlName="iddepartement" id="iddepartement" class="custom-select mr-sm-2">
                 <option>Choisir un projet</option>
-                <option *ngFor="let departement of departements" value="{{departement.iddepartement}}" >{{departement.libelle}}</option>
+                <option *ngFor="let departement of departements" value="{{departement.iddepartement}}" [selected]="employe.departement.iddepartement == departement.iddepartement">{{departement.libelle}}</option>
               </select>
             </div>
             <div class="form-group">
               <label class="mr-sm-2" for="idprojet">Projet :</label>
               <select formControlName="idprojet" id="idprojet" class="custom-select mr-sm-2">
                 <option>Choisir un projet</option>
-                <option *ngFor="let projet of projets" value="{{projet.idprojet}}">{{projet.titre}}</option>
+                <option *ngFor="let projet of projets" value="{{projet.idprojet}}" [attr.selected]="employe.projet.idprojet == projet.idprojet ? true : null">{{projet.titre}}</option>
               </select>
             </div>
             <div class="form-group">
               <label class="mr-sm-2" for="idrole">Rôle :</label>
               <select formControlName="idrole" id="idrole" class="custom-select mr-sm-2">
                 <option>Choisir un projet</option>
-                <option *ngFor="let role of roles" value="{{role.idrole}}">{{role.libelle}}</option>
+                <option *ngFor="let role of roles" value="{{role.idrole}}" [attr.selected]="employe.role.idrole == role.idrole ? true : null">{{role.libelle}}</option>
               </select>
             </div>
 
