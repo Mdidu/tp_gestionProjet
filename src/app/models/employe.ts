@@ -6,7 +6,7 @@ export class Employe {
   id: number;
   prenom: string;
   nom: string;
-  email: string;
+  mail: string;
   pwd: string;
   departement:Departement;
   projet: Projet;

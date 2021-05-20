@@ -33,7 +33,6 @@ export class ProjetsComponent implements OnInit {
 
     setTimeout(
       () => {
-
         this.displayProjet();
       }, 1000);
   }

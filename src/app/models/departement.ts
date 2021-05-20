@@ -1,4 +1,4 @@
 export class Departement {
-  id: number;
+  iddepartement: number;
   libelle: string;
 }

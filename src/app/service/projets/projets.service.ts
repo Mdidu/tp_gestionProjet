@@ -15,14 +15,6 @@ export class ProjetsService {
     .map(res => {
       return res;
     });
-    // .subscribe(
-    //   (res) => {
-    //     console.log(res);
-    //   },
-    //   (error) => {
-    //     console.log("error=" + error.message);
-    //   }
-    // );
   }
 
   public findAll() {

@@ -11,17 +11,29 @@ export class EmployesComponent implements OnInit {
   employes: any;
 
   constructor(public employeService: EmployesService) {
-      employeService.findAll().subscribe(
-        (employes) => {
-          this.employes = employes;
-        },
-        (error) => {
-          console.log("error=" + error.message);
-        }
-      );
+      this.displayEmploye();
      }
 
   ngOnInit(): void {
   }
 
+  displayEmploye() {
+    this.employes = this.employeService.findAll().subscribe(
+      (employes) => {
+        this.employes = employes;
+      },
+      (error) => {
+        console.log("error=" + error.message);
+      }
+    );
+  }
+
+  onRemoveEmploye(id: number) {
+    this.employeService.remove(id);
+
+    setTimeout(
+      () => {
+        this.displayEmploye();
+      }, 1000);
+  }
 }

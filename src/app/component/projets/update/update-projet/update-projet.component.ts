@@ -31,7 +31,7 @@ export class UpdateProjetComponent implements OnInit {
       titre: [this.projet.titre, Validators.required],
       type: [this.projet.type, Validators.required],
       description: [this.projet.description, Validators.required],
-      datedebut: [new Date(this.projet.datedebut), Validators.required],
+      datedebut: [this.projet.datedebut, Validators.required],
       datefinestimee: [this.projet.datefinestimee, Validators.required],
       datefinreel: [this.projet.datefinreel]
     });
