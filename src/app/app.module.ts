@@ -17,6 +17,8 @@ import { UpdateEmployeComponent } from './component/employes/update/update-emplo
 import { AddDepartementComponent } from './component/departements/add/add-departement/add-departement.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HomeComponent } from './component/home/home/home.component';
+import { NotFoundComponent } from './component/not-found/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     AddProjetComponent,
     UpdateProjetComponent,
     AddEmployeComponent,
-    UpdateEmployeComponent
+    UpdateEmployeComponent,
+    HomeComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

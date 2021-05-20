@@ -11,6 +11,8 @@ import { AddProjetComponent } from './component/projets/add/add-projet/add-proje
 import { UpdateProjetComponent } from './component/projets/update/update-projet/update-projet.component';
 import { AddEmployeComponent } from './component/employes/add/add-employe/add-employe.component';
 import { UpdateEmployeComponent } from './component/employes/update/update-employe/update-employe.component';
+import { NotFoundComponent } from './component/not-found/not-found/not-found.component';
+import { HomeComponent } from './component/home/home/home.component';
 
 const routes: Routes = [
   { path: 'employe/list', component: EmployesComponent},
@@ -23,7 +25,10 @@ const routes: Routes = [
   { path: 'departement/list', component: DepartementsComponent},
   { path: 'departement/add', component: AddDepartementComponent},
   { path: 'departement/update/:id', component: UpdateDepartementComponent},
-  { path: 'login', component: LoginComponent}
+  { path: 'login', component: LoginComponent},
+  { path: '', component: HomeComponent},
+  { path: 'not-found', component: NotFoundComponent},
+  { path: '**', redirectTo: 'not-found'},
 ];
 
 @NgModule({
