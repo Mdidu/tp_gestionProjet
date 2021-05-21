@@ -46,9 +46,9 @@ export class ModulesService {
     );
   }
 
-  public remove(id: number) {
-    return this.http.delete("http://localhost:8082/gestionProjetBack/module/delete/" + id).subscribe(
-      () => {}
-    );
-  }
+  // public remove(id: number) {
+  //   return this.http.delete("http://localhost:8082/gestionProjetBack/module/delete/" + id).subscribe(
+  //     () => {}
+  //   );
+  // }
 }

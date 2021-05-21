@@ -20,6 +20,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './component/home/home/home.component';
 import { NotFoundComponent } from './component/not-found/not-found/not-found.component';
 import { InfoProjetComponent } from './component/info-projet/info-projet/info-projet.component';
+import { InfoModuleComponent } from './component/info-module/info-module/info-module.component';
+import { AddModuleComponent } from './component/modules/add-module/add-module.component';
+import { UpdateModuleComponent } from './component/modules/update-module/update-module.component';
+import { AddTacheComponent } from './component/taches/add-tache/add-tache.component';
+import { UpdateTacheComponent } from './component/taches/update-tache/update-tache.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +43,12 @@ import { InfoProjetComponent } from './component/info-projet/info-projet/info-pr
     UpdateEmployeComponent,
     HomeComponent,
     NotFoundComponent,
-    InfoProjetComponent
+    InfoProjetComponent,
+    InfoModuleComponent,
+    AddModuleComponent,
+    UpdateModuleComponent,
+    AddTacheComponent,
+    UpdateTacheComponent
   ],
   imports: [
     BrowserModule,

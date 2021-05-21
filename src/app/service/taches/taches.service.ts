@@ -16,6 +16,13 @@ export class TachesService {
     });
   }
 
+  findByModule(id: string | null) {
+    return this.http.get<any>("http://localhost:8082/gestionProjetBack/tache/module/"+ id)
+    .map(res => {
+      return res;
+    });
+  }
+
   public findAll() {
     return this.http.get<any>("http://localhost:8082/gestionProjetBack/tache/read")
     .map(res => {
@@ -39,9 +46,9 @@ export class TachesService {
     );
   }
 
-  public remove(id: number) {
-    return this.http.delete("http://localhost:8082/gestionProjetBack/tache/delete/" + id).subscribe(
-      () => {}
-    );
-  }
+  // public remove(id: number) {
+  //   return this.http.delete("http://localhost:8082/gestionProjetBack/tache/delete/" + id).subscribe(
+  //     () => {}
+  //   );
+  // }
 }

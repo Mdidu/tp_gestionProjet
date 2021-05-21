@@ -14,6 +14,11 @@ import { UpdateEmployeComponent } from './component/employes/update/update-emplo
 import { NotFoundComponent } from './component/not-found/not-found/not-found.component';
 import { HomeComponent } from './component/home/home/home.component';
 import { InfoProjetComponent } from './component/info-projet/info-projet/info-projet.component';
+import { InfoModuleComponent } from './component/info-module/info-module/info-module.component';
+import { UpdateModuleComponent } from './component/modules/update-module/update-module.component';
+import { UpdateTacheComponent } from './component/taches/update-tache/update-tache.component';
+import { AddModuleComponent } from './component/modules/add-module/add-module.component';
+import { AddTacheComponent } from './component/taches/add-tache/add-tache.component';
 
 const routes: Routes = [
   { path: 'employe/list', component: EmployesComponent},
@@ -23,9 +28,14 @@ const routes: Routes = [
   { path: 'projet/add', component: AddProjetComponent},
   { path: 'projet/update/:id', component: UpdateProjetComponent},
   { path: 'projet/:id', component: InfoProjetComponent},
+  { path: 'projet/:id/module/:idModule', component: InfoModuleComponent},
+  { path: 'projet/:id/module/:idModule/tache/update/:idTache', component: UpdateTacheComponent},
+  { path: 'projet/:id/module/update/:idmodule', component: UpdateModuleComponent},
   { path: 'departement/list', component: DepartementsComponent},
   { path: 'departement/add', component: AddDepartementComponent},
   { path: 'departement/update/:id', component: UpdateDepartementComponent},
+  { path: 'module/add', component: AddModuleComponent},
+  { path: 'tache/add', component: AddTacheComponent},
   { path: 'agenda', component: AgendaComponent},
   { path: 'login', component: LoginComponent},
   { path: '', component: HomeComponent},
