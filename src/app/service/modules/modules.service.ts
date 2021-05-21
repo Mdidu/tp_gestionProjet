@@ -16,6 +16,13 @@ export class ModulesService {
     });
   }
 
+  findByProjet(id: string | null) {
+    return this.http.get<any>("http://localhost:8082/gestionProjetBack/module/projet/"+ id)
+    .map(res => {
+      return res;
+    });
+  }
+
   public findAll() {
     return this.http.get<any>("http://localhost:8082/gestionProjetBack/module/read")
     .map(res => {

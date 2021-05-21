@@ -1,10 +1,10 @@
 import * as Module from "module";
 
 export class Tache {
-  id?: number;
+  idtache?: number;
   libelle?: string;
-  dateDebut?: Date;
-  dateFinEstimee?: Date;
-  dateFinReel?: Date;
+  datedebut?: Date;
+  datefinestimee?: Date;
+  datefinreel?: Date;
   module?: Module;
 }

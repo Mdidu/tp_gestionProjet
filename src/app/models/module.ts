@@ -1,10 +1,10 @@
 import { Projet } from "./projet";
 
 export class Module {
-  id?: number;
+  idmodule?: number;
   nom?: string;
-  dateDebut?: Date;
-  dateFinEstimee?: Date;
-  dateFinReel?: Date;
+  datedebut?: Date;
+  datefinestimee?: Date;
+  datefinreel?: Date;
   projet?: Projet;
 }

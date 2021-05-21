@@ -10,6 +10,7 @@
       <th scope="col">Date début</th>
       <th scope="col">Date fin estimée</th>
       <th scope="col">Date fin réel</th>
+      <th scope="col">Détails projet</th>
       <th scope="col">Supprimer</th>
       <th scope="col">Modifier</th>
     </tr>
@@ -24,6 +25,9 @@
       <td>{{projet.datedebut  | date:'shortDate'}}</td>
       <td>{{projet.datefinestimee  | date:'shortDate'}}</td>
       <td>{{projet.datefinreel  | date:'shortDate'}}</td>
+      <td>
+        <a routerLink="../{{projet.idprojet}}" class="btn btn-primary">Info projet</a>
+      </td>
       <td>
         <button (click)="onRemoveProjet(projet.idprojet)" class="btn btn-primary">Supprimer</button>
       </td>

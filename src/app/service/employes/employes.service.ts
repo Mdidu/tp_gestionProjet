@@ -18,6 +18,13 @@ export class EmployesService {
     });
   }
 
+  findByProjet(id: string | null) {
+    return this.http.get<any>("http://localhost:8082/gestionProjetBack/employe/projet/"+ id)
+    .map(res => {
+      return res;
+    });
+  }
+
   public findAll() {
     return this.http.get<any>("http://localhost:8082/gestionProjetBack/employe/read")
     .map(res => {

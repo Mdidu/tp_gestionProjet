@@ -19,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './component/home/home/home.component';
 import { NotFoundComponent } from './component/not-found/not-found/not-found.component';
+import { InfoProjetComponent } from './component/info-projet/info-projet/info-projet.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { NotFoundComponent } from './component/not-found/not-found/not-found.com
     AddEmployeComponent,
     UpdateEmployeComponent,
     HomeComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    InfoProjetComponent
   ],
   imports: [
     BrowserModule,

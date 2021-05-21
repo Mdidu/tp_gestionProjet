@@ -13,6 +13,7 @@ import { AddEmployeComponent } from './component/employes/add/add-employe/add-em
 import { UpdateEmployeComponent } from './component/employes/update/update-employe/update-employe.component';
 import { NotFoundComponent } from './component/not-found/not-found/not-found.component';
 import { HomeComponent } from './component/home/home/home.component';
+import { InfoProjetComponent } from './component/info-projet/info-projet/info-projet.component';
 
 const routes: Routes = [
   { path: 'employe/list', component: EmployesComponent},
@@ -21,10 +22,11 @@ const routes: Routes = [
   { path: 'projet/list', component: ProjetsComponent},
   { path: 'projet/add', component: AddProjetComponent},
   { path: 'projet/update/:id', component: UpdateProjetComponent},
-  { path: 'agenda', component: AgendaComponent},
+  { path: 'projet/:id', component: InfoProjetComponent},
   { path: 'departement/list', component: DepartementsComponent},
   { path: 'departement/add', component: AddDepartementComponent},
   { path: 'departement/update/:id', component: UpdateDepartementComponent},
+  { path: 'agenda', component: AgendaComponent},
   { path: 'login', component: LoginComponent},
   { path: '', component: HomeComponent},
   { path: 'not-found', component: NotFoundComponent},
