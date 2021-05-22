@@ -33,7 +33,7 @@ export class ModulesService {
   public add(data: any) {
     return this.http.post("http://localhost:8082/gestionProjetBack/module/add", data).subscribe(
       () => {
-        this.router.navigate(['module/list']);
+        this.router.navigate(['projet/list']);
       }
     );
   }
@@ -41,7 +41,7 @@ export class ModulesService {
   public update(data: any) {
     return this.http.put("http://localhost:8082/gestionProjetBack/module/update", data).subscribe(
       () => {
-        this.router.navigate(['module/list']);
+        this.router.navigate(['projet/list']);
       }
     );
   }

@@ -33,7 +33,7 @@ export class TachesService {
   public add(data: any) {
     return this.http.post("http://localhost:8082/gestionProjetBack/tache/add", data).subscribe(
       () => {
-        this.router.navigate(['tache/list']);
+        this.router.navigate(['projet/list']);
       }
     );
   }
@@ -41,7 +41,7 @@ export class TachesService {
   public update(data: any) {
     return this.http.put("http://localhost:8082/gestionProjetBack/tache/update", data).subscribe(
       () => {
-        this.router.navigate(['tache/list']);
+        this.router.navigate(['projet/list']);
       }
     );
   }

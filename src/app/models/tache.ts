@@ -1,4 +1,4 @@
-import * as Module from "module";
+import { Module } from "./module";
 
 export class Tache {
   idtache?: number;
