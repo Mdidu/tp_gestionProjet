@@ -18,3 +18,6 @@ Stack :
 
 ![image](https://user-images.githubusercontent.com/56021893/118979099-67958b80-b978-11eb-8199-ef4810f731be.png)
 
+Form d'ajout d'un module + new navbar
+
+![image](https://user-images.githubusercontent.com/56021893/119219420-d04e4680-bae5-11eb-936f-c1184eb977e2.png)
