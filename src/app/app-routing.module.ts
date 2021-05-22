@@ -30,7 +30,7 @@ const routes: Routes = [
   { path: 'projet/:id', component: InfoProjetComponent},
   { path: 'projet/:id/module/:idModule', component: InfoModuleComponent},
   { path: 'projet/:id/module/:idModule/tache/update/:idTache', component: UpdateTacheComponent},
-  { path: 'projet/:id/module/update/:idmodule', component: UpdateModuleComponent},
+  { path: 'projet/:id/module/update/:idModule', component: UpdateModuleComponent},
   { path: 'departement/list', component: DepartementsComponent},
   { path: 'departement/add', component: AddDepartementComponent},
   { path: 'departement/update/:id', component: UpdateDepartementComponent},
