@@ -32,7 +32,7 @@ export class UpdateProjetComponent implements OnInit {
       type: [this.projet.type, Validators.required],
       description: [this.projet.description, Validators.required],
       datedebut: [this.projet.datedebut, Validators.required],
-      datefinestimee: [this.projet.datefinestimee, Validators.required],
+      datefinestimee: [this.projet.datefinestimee],
       datefinreel: [this.projet.datefinreel]
     });
   }

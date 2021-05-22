@@ -21,8 +21,8 @@ export class AddProjetComponent implements OnInit {
       type: ['', Validators.required],
       description: ['', Validators.required],
       datedebut: ['', Validators.required],
-      datefinestimee: ['', Validators.required],
-      datefinreel: ['', Validators.required]
+      datefinestimee: [''],
+      datefinreel: ['']
     });
   }
 
