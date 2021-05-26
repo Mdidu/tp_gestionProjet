@@ -8,16 +8,17 @@ Stack :
 
 - Spring Boot ( https://github.com/Mdidu/tp_gestionProjetBack )
 
-![image](https://user-images.githubusercontent.com/56021893/118249747-010afc00-b4a6-11eb-9a51-b47660270ed9.png)
+![image](https://user-images.githubusercontent.com/56021893/119634012-97c6a980-be12-11eb-9e0e-59cac13bd685.png)
 
-![image](https://user-images.githubusercontent.com/56021893/118978155-47190180-b977-11eb-8398-f3eac9dadd51.png)
+![image](https://user-images.githubusercontent.com/56021893/119634109-af059700-be12-11eb-8867-886cf1b32d69.png)
 
-![image](https://user-images.githubusercontent.com/56021893/118978890-27cea400-b978-11eb-8850-79c9d1a2c9a0.png)
+![image](https://user-images.githubusercontent.com/56021893/119633871-6f3eaf80-be12-11eb-8b59-936b8d27ffe0.png)
 
-![image](https://user-images.githubusercontent.com/56021893/118978697-e50ccc00-b977-11eb-916d-de25f4af5832.png)
+![image](https://user-images.githubusercontent.com/56021893/119633951-88dff700-be12-11eb-9258-589d9e6ede1d.png)
 
-![image](https://user-images.githubusercontent.com/56021893/118979099-67958b80-b978-11eb-8199-ef4810f731be.png)
+![image](https://user-images.githubusercontent.com/56021893/119634218-d0ff1980-be12-11eb-900b-768a034beefe.png)
 
-Form d'ajout d'un module + new navbar
+![image](https://user-images.githubusercontent.com/56021893/119634495-19b6d280-be13-11eb-9659-e386fef0212e.png)
 
-![image](https://user-images.githubusercontent.com/56021893/119219420-d04e4680-bae5-11eb-936f-c1184eb977e2.png)
+![image](https://user-images.githubusercontent.com/56021893/119634587-2b987580-be13-11eb-9018-a8e7f0b4f40a.png)
+
