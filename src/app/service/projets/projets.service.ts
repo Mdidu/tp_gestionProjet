@@ -17,6 +17,13 @@ export class ProjetsService {
     });
   }
 
+  public findByDate(dateDebut: Date, dateFin: Date) {
+    return this.http.get<any>("http://localhost:8082/gestionProjetBack/projet/read/date/dateDebut/" + dateDebut + "/dateFin/" + dateFin)
+    .map(res => {
+      return res;
+    });
+  }
+
   public findAll() {
     return this.http.get<any>("http://localhost:8082/gestionProjetBack/projet/read")
     .map(res => {
