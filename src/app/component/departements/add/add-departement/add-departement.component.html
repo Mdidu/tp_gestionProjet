@@ -6,7 +6,8 @@
           <h5 class="card-title text-center">Entrez le département à ajouter</h5>
           <form class="form-signin" [formGroup]="addDepartementForm" (ngSubmit)="onSubmit()">
             <div class="form-group">
-              <label for="libelle">Nom :</label>
+              <label for="libelle">Nom <span class="text-danger">*</span> :</label>
+
               <input type="text" formControlName="libelle" class="form-control col-sm-10" id="libelle" placeholder="Entrez nom du département" />
             </div>
             <button type="submit" [disabled]="addDepartementForm.invalid" class="btn btn-primary">Envoyer</button>

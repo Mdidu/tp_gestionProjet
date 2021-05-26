@@ -9,35 +9,35 @@
               <input type="hidden" formControlName="idemploye" class="form-control col-sm-10" id="idemploye"/>
             </div>
             <div class="form-group">
-              <label for="mail">Email :</label>
+              <label for="mail">Email <span class="text-danger">*</span> :</label>
               <input type="text" formControlName="mail" class="form-control col-sm-10" id="mail" placeholder="Entrez l'email de l'employé" />
             </div>
             <div class="form-group">
-              <label for="nom">Nom :</label>
+              <label for="nom">Nom <span class="text-danger">*</span> :</label>
               <input type="text" formControlName="nom" class="form-control col-sm-10" id="nom" placeholder="Entrez le nom de l'employé" />
             </div>
             <div class="form-group">
-              <label for="prenom">Prénom :</label>
+              <label for="prenom">Prénom <span class="text-danger">*</span> :</label>
               <input type="text" formControlName="prenom" class="form-control col-sm-10" id="prenom" placeholder="Entrez le prénom de l'employé" />
             </div>
             <div class="form-group">
-              <label for="pwd">Mot de passe :</label>
+              <label for="pwd">Mot de passe <span class="text-danger">*</span> :</label>
               <input type="password" formControlName="pwd" class="form-control col-sm-10" id="pwd" placeholder="Entrez mot de passe de l'employé" />
             </div>
             <div class="form-group">
-              <label class="mr-sm-2" for="iddepartement">Choisir un département :</label>
+              <label class="mr-sm-2" for="iddepartement">Choisir un département <span class="text-danger">*</span> :</label>
               <select formControlName="iddepartement" id="iddepartement" class="custom-select mr-sm-2">
                 <option *ngFor="let departement of departements" value="{{departement.iddepartement}}">{{departement.libelle}}</option>
               </select>
             </div>
             <div class="form-group">
-              <label class="mr-sm-2" for="idprojet">Choisir un projet :</label>
+              <label class="mr-sm-2" for="idprojet">Choisir un projet <span class="text-danger">*</span> :</label>
               <select formControlName="idprojet" id="idprojet" class="custom-select mr-sm-2">
                 <option *ngFor="let projet of projets" value="{{projet.idprojet}}">{{projet.titre}}</option>
               </select>
             </div>
             <div class="form-group">
-              <label class="mr-sm-2" for="idrole">Choisir un rôle :</label>
+              <label class="mr-sm-2" for="idrole">Choisir un rôle <span class="text-danger">*</span> :</label>
               <select formControlName="idrole" id="idrole" class="custom-select mr-sm-2">
                 <option *ngFor="let role of roles" value="{{role.idrole}}">{{role.libelle}}</option>
               </select>

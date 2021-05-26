@@ -10,11 +10,11 @@
               <input type="hidden" formControlName="idmodule" class="form-control col-sm-10" id="idmodule"/>
             </div>
             <div class="form-group">
-              <label for="nom">Nom :</label>
+              <label for="nom">Nom <span class="text-danger">*</span> :</label>
               <input type="text" formControlName="nom" class="form-control col-sm-10" id="nom" placeholder="Entrez le nom" />
             </div>
             <div class="form-group">
-              <label for="datedebut">Date début :</label>
+              <label for="datedebut">Date début <span class="text-danger">*</span> :</label>
               <input type="date" formControlName="datedebut" class="form-control col-sm-10" id="datedebut" placeholder="Entrez la date de début " />
             </div>
             <div class="form-group">
@@ -26,7 +26,7 @@
               <input type="date" formControlName="datefinreel" class="form-control col-sm-10" id="datefinreel" placeholder="Entrez la date de fin réel" />
             </div>
             <div class="form-group">
-              <label class="mr-sm-2" for="idprojet">Choisir un projet :</label>
+              <label class="mr-sm-2" for="idprojet">Choisir un projet <span class="text-danger">*</span> :</label>
               <select formControlName="idprojet" id="idprojet" class="custom-select mr-sm-2">
                 <option *ngFor="let projet of proj" value="{{projet.idprojet}}">{{projet.titre}}</option>
               </select>

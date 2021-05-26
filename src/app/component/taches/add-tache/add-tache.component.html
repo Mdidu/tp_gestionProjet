@@ -6,11 +6,11 @@
           <h5 class="card-title text-center">Entrez la tâche à ajouter</h5>
           <form class="form-signin" *ngIf="addTacheForm" [formGroup]="addTacheForm" (ngSubmit)="onSubmit()">
             <div class="form-group">
-              <label for="libelle">Libelle :</label>
+              <label for="libelle">Libelle <span class="text-danger">*</span> :</label>
               <input type="text" formControlName="libelle" class="form-control col-sm-10" id="libelle" placeholder="Entrez le libelle" />
             </div>
             <div class="form-group">
-              <label for="datedebut">Date début :</label>
+              <label for="datedebut">Date début <span class="text-danger">*</span> :</label>
               <input type="date" formControlName="datedebut" class="form-control col-sm-10" id="datedebut" placeholder="Entrez la date de début " />
             </div>
             <div class="form-group">
@@ -22,7 +22,7 @@
               <input type="date" formControlName="datefinreel" class="form-control col-sm-10" id="datefinreel" placeholder="Entrez la date de fin réel" />
             </div>
             <div class="form-group">
-              <label class="mr-sm-2" for="idmodule">Choisir un module :</label>
+              <label class="mr-sm-2" for="idmodule">Choisir un module <span class="text-danger">*</span> :</label>
               <select formControlName="idmodule" id="idmodule" class="custom-select mr-sm-2">
                 <option *ngFor="let module of mod" value="{{module.idmodule}}">{{module.nom}}</option>
               </select>

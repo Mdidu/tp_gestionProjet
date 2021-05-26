@@ -6,27 +6,27 @@
           <h5 class="card-title text-center">Entrez le projet à ajouter</h5>
           <form class="form-signin" [formGroup]="addProjetForm" (ngSubmit)="onSubmit()">
             <div class="form-group">
-              <label for="client">Nom client:</label>
+              <label for="client">Nom client <span class="text-danger">*</span> :</label>
               <input type="text" formControlName="client" class="form-control col-sm-10" id="client" placeholder="Entrez nom du projet" />
             </div>
             <div class="form-group">
-              <label for="code">Code :</label>
+              <label for="code">Code <span class="text-danger">*</span> :</label>
               <input type="number" formControlName="code" class="form-control col-sm-10" id="code" placeholder="Entrez code du projet" />
             </div>
             <div class="form-group">
-              <label for="titre">Titre :</label>
+              <label for="titre">Titre <span class="text-danger">*</span> :</label>
               <input type="text" formControlName="titre" class="form-control col-sm-10" id="titre" placeholder="Entrez titre du projet" />
             </div>
             <div class="form-group">
-              <label for="type">Type :</label>
+              <label for="type">Type <span class="text-danger">*</span> :</label>
               <input type="text" formControlName="type" class="form-control col-sm-10" id="type" placeholder="Entrez type du projet" />
             </div>
             <div class="form-group">
-              <label for="description">Description :</label>
+              <label for="description">Description <span class="text-danger">*</span> :</label>
               <input type="text" formControlName="description" class="form-control col-sm-10" id="description" placeholder="Entrez description du projet" />
             </div>
             <div class="form-group">
-              <label for="datedebut">Date début :</label>
+              <label for="datedebut">Date début <span class="text-danger">*</span> :</label>
               <input type="date" formControlName="datedebut" class="form-control col-sm-10" id="datedebut" placeholder="Entrez date du projet" />
             </div>
             <div class="form-group">
