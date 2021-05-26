@@ -20,7 +20,9 @@
       <td>{{employe.mail}}</td>
       <td>{{employe.pwd}}</td>
       <td>{{employe.departement.libelle}}</td>
-      <td>{{employe.projet.titre}}</td>
+      <td>
+        <a routerLink="../../projet/{{employe.projet.idprojet}}" class="btn btn-primary">{{employe.projet.titre}}</a>
+      </td>
       <td>{{employe.role.libelle}}</td>
       <td>
         <button (click)="onRemoveEmploye(employe.idemploye)" class="btn btn-primary">Supprimer</button>
