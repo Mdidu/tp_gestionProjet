@@ -1,6 +1,5 @@
 import { LoginComponent } from './component/login/login.component';
 import { DepartementsComponent } from './component/departements/departements.component';
-import { AgendaComponent } from './component/agenda/agenda.component';
 import { ProjetsComponent } from './component/projets/projets.component';
 import { EmployesComponent } from './component/employes/employes.component';
 import { NgModule } from '@angular/core';
@@ -36,7 +35,6 @@ const routes: Routes = [
   { path: 'departement/update/:id', component: UpdateDepartementComponent},
   { path: 'module/add', component: AddModuleComponent},
   { path: 'tache/add', component: AddTacheComponent},
-  { path: 'agenda', component: AgendaComponent},
   { path: 'login', component: LoginComponent},
   { path: '', component: HomeComponent},
   { path: 'not-found', component: NotFoundComponent},
