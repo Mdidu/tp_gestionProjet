@@ -24,6 +24,9 @@ import { AddModuleComponent } from './component/modules/add-module/add-module.co
 import { UpdateModuleComponent } from './component/modules/update-module/update-module.component';
 import { AddTacheComponent } from './component/taches/add-tache/add-tache.component';
 import { UpdateTacheComponent } from './component/taches/update-tache/update-tache.component';
+import { RegisterComponent } from './component/register/register/register.component';
+import { ProfileComponent } from './component/profile/profile/profile.component';
+import { authInterceptorProviders } from './helpers/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -46,7 +49,9 @@ import { UpdateTacheComponent } from './component/taches/update-tache/update-tac
     AddModuleComponent,
     UpdateModuleComponent,
     AddTacheComponent,
-    UpdateTacheComponent
+    UpdateTacheComponent,
+    RegisterComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +59,9 @@ import { UpdateTacheComponent } from './component/taches/update-tache/update-tac
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    authInterceptorProviders
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -18,6 +18,8 @@ import { UpdateModuleComponent } from './component/modules/update-module/update-
 import { UpdateTacheComponent } from './component/taches/update-tache/update-tache.component';
 import { AddModuleComponent } from './component/modules/add-module/add-module.component';
 import { AddTacheComponent } from './component/taches/add-tache/add-tache.component';
+import { RegisterComponent } from './component/register/register/register.component';
+import { ProfileComponent } from './component/profile/profile/profile.component';
 
 const routes: Routes = [
   { path: 'employe/list', component: EmployesComponent},
@@ -36,6 +38,10 @@ const routes: Routes = [
   { path: 'module/add', component: AddModuleComponent},
   { path: 'tache/add', component: AddTacheComponent},
   { path: 'login', component: LoginComponent},
+  // **** A update / delete
+  { path: 'register', component: RegisterComponent },
+  { path: 'profile', component: ProfileComponent },
+  // Entre les 2 *****
   { path: '', component: HomeComponent},
   { path: 'not-found', component: NotFoundComponent},
   { path: '**', redirectTo: 'not-found'},

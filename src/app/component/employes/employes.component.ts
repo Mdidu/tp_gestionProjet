@@ -18,6 +18,7 @@ export class EmployesComponent implements OnInit {
   }
 
   displayEmploye() {
+
     this.employes = this.employeService.findAll().subscribe(
       (employes) => {
         this.employes = employes;

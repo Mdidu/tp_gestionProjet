@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import 'rxjs/add/operator/map';
 import { Router } from '@angular/router';
 
+const BASE_URI = 'http://localhost:8082/gestionProjetBack/departement/';
 
 @Injectable({
   providedIn: 'root'
@@ -12,21 +13,21 @@ export class DepartementsService {
   constructor(private http: HttpClient, private router: Router) { }
 
   public findById(id: string | null) {
-    return this.http.get<any>("http://localhost:8082/gestionProjetBack/departement/read/"+ id)
+    return this.http.get<any>(BASE_URI + "read/"+ id)
     .map(res => {
       return res;
     });
   }
 
   public findAll() {
-    return this.http.get("http://localhost:8082/gestionProjetBack/departement/read")
+    return this.http.get(BASE_URI + "read")
     .map(res => {
       return res;
     });
   }
 
   public add(data: any) {
-    return this.http.post("http://localhost:8082/gestionProjetBack/departement/add", data).subscribe(
+    return this.http.post(BASE_URI + "add", data).subscribe(
       () => {
         this.router.navigate(['departement/list']);
       }
@@ -34,7 +35,7 @@ export class DepartementsService {
   }
 
   public update(data: any) {
-    return this.http.put("http://localhost:8082/gestionProjetBack/departement/update", data).subscribe(
+    return this.http.put(BASE_URI + "update", data).subscribe(
       () => {
         this.router.navigate(['departement/list']);
       }
@@ -42,7 +43,7 @@ export class DepartementsService {
   }
 
   public remove(id: number) {
-    return this.http.delete("http://localhost:8082/gestionProjetBack/departement/delete/" + id).subscribe(
+    return this.http.delete(BASE_URI + "delete/" + id).subscribe(
       () => {}
     );
   }

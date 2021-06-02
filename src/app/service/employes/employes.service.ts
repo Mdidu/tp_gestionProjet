@@ -1,39 +1,42 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 
 import 'rxjs/add/operator/map';
+
+const BASE_URI = 'http://localhost:8082/gestionProjetBack/employe/';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EmployesService {
 
-  constructor(private http: HttpClient, private router: Router) { }
+  constructor(private http: HttpClient, private router: Router) {
+  }
 
   public findById(id: string | null) {
-    return this.http.get<any>("http://localhost:8082/gestionProjetBack/employe/read/"+ id)
+    return this.http.get<any>(BASE_URI + "read/"+ id)
     .map(res => {
       return res;
     });
   }
 
   findByProjet(id: string | null) {
-    return this.http.get<any>("http://localhost:8082/gestionProjetBack/employe/projet/"+ id)
+    return this.http.get<any>(BASE_URI + "projet/"+ id)
     .map(res => {
       return res;
     });
   }
 
   public findAll() {
-    return this.http.get<any>("http://localhost:8082/gestionProjetBack/employe/read")
+    return this.http.get<any>(BASE_URI + "read")
     .map(res => {
       return res;
     });
   }
 
   public add(data: any) {
-    return this.http.post("http://localhost:8082/gestionProjetBack/employe/add", data).subscribe(
+    return this.http.post(BASE_URI + "add", data).subscribe(
       () => {
         this.router.navigate(['employe/list']);
       }
@@ -41,7 +44,7 @@ export class EmployesService {
   }
 
   public update(data: any) {
-    return this.http.put("http://localhost:8082/gestionProjetBack/employe/update", data).subscribe(
+    return this.http.put(BASE_URI + "update", data).subscribe(
       () => {
         this.router.navigate(['employe/list']);
       }
@@ -49,7 +52,7 @@ export class EmployesService {
   }
 
   public remove(id: number) {
-    return this.http.delete("http://localhost:8082/gestionProjetBack/employe/delete/" + id).subscribe(
+    return this.http.delete(BASE_URI + "delete/" + id).subscribe(
       () => { }
     );
   }
