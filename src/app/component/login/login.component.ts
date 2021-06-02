@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
   errorMessage = '';
   roles: string[] = [];
 
-  constructor(private authService: AuthService,
+  constructor(public authService: AuthService,
     private tokenStorage: TokenStorageService,
     private formBuilder: FormBuilder,
     private route: ActivatedRoute,
@@ -55,7 +55,7 @@ export class LoginComponent implements OnInit {
           this.roles = this.tokenStorage.getUser().roles;
           this.reloadPage();
         },
-        err => {
+        (err) => {
           this.errorMessage = err.error.message;
           this.isLoginFailed = true;
         }
