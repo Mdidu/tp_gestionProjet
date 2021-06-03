@@ -36,6 +36,7 @@ const routes: Routes = [
   { path: 'departement/update/:id', component: UpdateDepartementComponent, canActivate: [AuthGuard]},
   { path: 'module/add', component: AddModuleComponent, canActivate: [AuthGuard]},
   { path: 'tache/add', component: AddTacheComponent, canActivate: [AuthGuard]},
+  { path: 'login', component: LoginComponent},
   { path: '', component: HomeComponent},
   { path: 'not-found', component: NotFoundComponent},
   { path: '**', redirectTo: 'not-found'},

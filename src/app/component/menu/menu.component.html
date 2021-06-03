@@ -56,7 +56,7 @@
 
     <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
       <li class="nav-item">
-        {{ username }}
+        <div class="nav-link" >{{ username }}</div>
       </li>
       <li class="nav-item">
         <a href class="nav-link" (click)="logout()">Deconnexion</a>
