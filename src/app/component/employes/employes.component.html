@@ -5,7 +5,6 @@
       <th scope="col">Prénom</th>
       <th scope="col">Nom</th>
       <th scope="col">Email</th>
-      <th scope="col">Mot de passe</th>
       <th scope="col">Département</th>
       <th scope="col">Projet</th>
       <th scope="col">Role</th>
@@ -18,7 +17,6 @@
       <td>{{employe.prenom}}</td>
       <td>{{employe.nom}}</td>
       <td>{{employe.mail}}</td>
-      <td>{{employe.pwd}}</td>
       <td>{{employe.departement.libelle}}</td>
       <td>
         <a routerLink="../../projet/{{employe.projet.idprojet}}" class="btn btn-primary">{{employe.projet.titre}}</a>

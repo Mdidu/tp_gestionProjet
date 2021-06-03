@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 
 import 'rxjs/add/operator/map';
 
-const BASE_URI = 'http://localhost:8082/gestionProjetBack/employe/';
+const BASE_URI = 'http://localhost:8082/gestionProjetBack/';
 
 @Injectable({
   providedIn: 'root'
@@ -15,28 +15,28 @@ export class EmployesService {
   }
 
   public findById(id: string | null) {
-    return this.http.get<any>(BASE_URI + "read/"+ id)
+    return this.http.get<any>(BASE_URI + "employe/read/"+ id)
     .map(res => {
       return res;
     });
   }
 
   findByProjet(id: string | null) {
-    return this.http.get<any>(BASE_URI + "projet/"+ id)
+    return this.http.get<any>(BASE_URI + "employe/projet/"+ id)
     .map(res => {
       return res;
     });
   }
 
   public findAll() {
-    return this.http.get<any>(BASE_URI + "read")
+    return this.http.get<any>(BASE_URI + "employe/read")
     .map(res => {
       return res;
     });
   }
 
   public add(data: any) {
-    return this.http.post(BASE_URI + "add", data).subscribe(
+    return this.http.post(BASE_URI + "auth/signup", data).subscribe(
       () => {
         this.router.navigate(['employe/list']);
       }
@@ -44,7 +44,7 @@ export class EmployesService {
   }
 
   public update(data: any) {
-    return this.http.put(BASE_URI + "update", data).subscribe(
+    return this.http.put(BASE_URI + "employe/update", data).subscribe(
       () => {
         this.router.navigate(['employe/list']);
       }
@@ -52,7 +52,7 @@ export class EmployesService {
   }
 
   public remove(id: number) {
-    return this.http.delete(BASE_URI + "delete/" + id).subscribe(
+    return this.http.delete(BASE_URI + "employe/delete/" + id).subscribe(
       () => { }
     );
   }

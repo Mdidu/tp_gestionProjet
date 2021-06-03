@@ -2,13 +2,13 @@ import { Projet } from './../../../../models/projet';
 import { Departement } from 'src/app/models/departement';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Employe } from 'src/app/models/employe';
 import { DepartementsService } from 'src/app/service/departements/departements.service';
 import { EmployesService } from 'src/app/service/employes/employes.service';
 import { ProjetsService } from 'src/app/service/projets/projets.service';
 import { RolesService } from 'src/app/service/roles/roles.service';
 import { Role } from 'src/app/models/role';
 import { Router } from '@angular/router';
+import { User } from 'src/app/models/user';
 
 @Component({
   selector: 'app-add-employe',
@@ -21,7 +21,7 @@ export class AddEmployeComponent implements OnInit {
   departements: any;
   projets: any;
   roles: any;
-  emp: Employe;
+  user: User;
   depart: Departement;
   proj: Projet;
   role: Role;
@@ -88,28 +88,16 @@ export class AddEmployeComponent implements OnInit {
   onSubmit() {
     const data = this.addEmployeForm.value;
 
-    this.depart = {
-      iddepartement: parseInt(data.iddepartement)
-    };
-
-    this.role = {
-      idrole: parseInt(data.idrole)
-    };
-
-    this.proj = {
-      idprojet: parseInt(data.idprojet)
-    };
-
-    this.emp = {
+    this.user = {
       prenom: data.prenom,
       nom: data.nom,
       mail: data.mail,
       pwd: data.pwd,
-      departement: this.depart,
-      projet: this.proj,
-      role: this.role
+      departement: parseInt(data.iddepartement),
+      projet: parseInt(data.idprojet),
+      role: parseInt(data.idprojet)
     };
 
-    this.employeService.add(this.emp);
+    this.employeService.add(this.user);
   }
 }
