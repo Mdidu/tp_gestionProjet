@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/service/auth/auth.service';
 import { TokenStorageService } from 'src/app/service/token/token-storage.service';
 
 @Component({
@@ -8,23 +9,16 @@ import { TokenStorageService } from 'src/app/service/token/token-storage.service
 })
 export class MenuComponent implements OnInit {
 
-  private roles: string[] = [];
   isLoggedIn = false;
-  showAdminBoard = false;
-  showModeratorBoard = false;
   username?: string;
 
-  constructor(private tokenStorageService: TokenStorageService) { }
+  constructor(private authService: AuthService, private tokenStorageService: TokenStorageService) { }
 
   ngOnInit(): void {
     this.isLoggedIn = !!this.tokenStorageService.getToken();
 
     if (this.isLoggedIn) {
       const user = this.tokenStorageService.getUser();
-      this.roles = user.roles;
-
-      this.showAdminBoard = this.roles.includes('ROLE_ADMIN');
-      this.showModeratorBoard = this.roles.includes('ROLE_MODERATOR');
 
       this.username = user.username;
     }
@@ -32,6 +26,7 @@ export class MenuComponent implements OnInit {
 
   logout(): void {
     this.tokenStorageService.signOut();
+    this.authService.setAuthenticated(false);
     window.location.reload();
   }
 

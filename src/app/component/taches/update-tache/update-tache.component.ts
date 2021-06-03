@@ -85,7 +85,6 @@ export class UpdateTacheComponent implements OnInit {
       module: this.modules
     }
 
-    console.log(this.taches);
     this.tacheService.update(this.taches);
   }
 

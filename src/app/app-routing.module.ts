@@ -20,27 +20,28 @@ import { AddModuleComponent } from './component/modules/add-module/add-module.co
 import { AddTacheComponent } from './component/taches/add-tache/add-tache.component';
 import { RegisterComponent } from './component/register/register/register.component';
 import { ProfileComponent } from './component/profile/profile/profile.component';
+import { AuthGuard } from './guard/auth/auth.guard';
 
 const routes: Routes = [
-  { path: 'employe/list', component: EmployesComponent},
-  { path: 'employe/add', component: AddEmployeComponent},
-  { path: 'employe/update/:id', component: UpdateEmployeComponent},
-  { path: 'projet/list', component: ProjetsComponent},
-  { path: 'projet/add', component: AddProjetComponent},
-  { path: 'projet/update/:id', component: UpdateProjetComponent},
-  { path: 'projet/:id', component: InfoProjetComponent},
-  { path: 'projet/:id/module/:idModule', component: InfoModuleComponent},
-  { path: 'projet/:id/module/:idModule/tache/update/:idTache', component: UpdateTacheComponent},
-  { path: 'projet/:id/module/update/:idModule', component: UpdateModuleComponent},
-  { path: 'departement/list', component: DepartementsComponent},
-  { path: 'departement/add', component: AddDepartementComponent},
-  { path: 'departement/update/:id', component: UpdateDepartementComponent},
-  { path: 'module/add', component: AddModuleComponent},
-  { path: 'tache/add', component: AddTacheComponent},
+  { path: 'employe/list', component: EmployesComponent, canActivate: [AuthGuard]},
+  { path: 'employe/add', component: AddEmployeComponent, canActivate: [AuthGuard]},
+  { path: 'employe/update/:id', component: UpdateEmployeComponent, canActivate: [AuthGuard]},
+  { path: 'projet/list', component: ProjetsComponent, canActivate: [AuthGuard]},
+  { path: 'projet/add', component: AddProjetComponent, canActivate: [AuthGuard]},
+  { path: 'projet/update/:id', component: UpdateProjetComponent, canActivate: [AuthGuard]},
+  { path: 'projet/:id', component: InfoProjetComponent, canActivate: [AuthGuard]},
+  { path: 'projet/:id/module/:idModule', component: InfoModuleComponent, canActivate: [AuthGuard]},
+  { path: 'projet/:id/module/:idModule/tache/update/:idTache', component: UpdateTacheComponent, canActivate: [AuthGuard]},
+  { path: 'projet/:id/module/update/:idModule', component: UpdateModuleComponent, canActivate: [AuthGuard]},
+  { path: 'departement/list', component: DepartementsComponent, canActivate: [AuthGuard]},
+  { path: 'departement/add', component: AddDepartementComponent, canActivate: [AuthGuard]},
+  { path: 'departement/update/:id', component: UpdateDepartementComponent, canActivate: [AuthGuard]},
+  { path: 'module/add', component: AddModuleComponent, canActivate: [AuthGuard]},
+  { path: 'tache/add', component: AddTacheComponent, canActivate: [AuthGuard]},
   { path: 'login', component: LoginComponent},
   // **** A update / delete
   { path: 'register', component: RegisterComponent },
-  { path: 'profile', component: ProfileComponent },
+  { path: 'profile', component: ProfileComponent , canActivate: [AuthGuard]},
   // Entre les 2 *****
   { path: '', component: HomeComponent},
   { path: 'not-found', component: NotFoundComponent},

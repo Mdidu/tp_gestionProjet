@@ -18,8 +18,8 @@ export class LoginComponent implements OnInit {
 
   isLoggedIn = false;
   isLoginFailed = false;
-  errorMessage = '';
-  roles: string[] = [];
+  errorMessage: string;
+  roles: string[];
 
   constructor(public authService: AuthService,
     private tokenStorage: TokenStorageService,
@@ -33,6 +33,8 @@ export class LoginComponent implements OnInit {
 
     if (this.tokenStorage.getToken()) {
       this.isLoggedIn = true;
+      this.authService.setAuthenticated(true);
+      this.isLoggedIn = this.authService.isAuthenticated();
       this.roles = this.tokenStorage.getUser().roles;
     }
 
