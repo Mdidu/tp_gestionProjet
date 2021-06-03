@@ -18,8 +18,6 @@ import { UpdateModuleComponent } from './component/modules/update-module/update-
 import { UpdateTacheComponent } from './component/taches/update-tache/update-tache.component';
 import { AddModuleComponent } from './component/modules/add-module/add-module.component';
 import { AddTacheComponent } from './component/taches/add-tache/add-tache.component';
-import { RegisterComponent } from './component/register/register/register.component';
-import { ProfileComponent } from './component/profile/profile/profile.component';
 import { AuthGuard } from './guard/auth/auth.guard';
 
 const routes: Routes = [
@@ -38,11 +36,6 @@ const routes: Routes = [
   { path: 'departement/update/:id', component: UpdateDepartementComponent, canActivate: [AuthGuard]},
   { path: 'module/add', component: AddModuleComponent, canActivate: [AuthGuard]},
   { path: 'tache/add', component: AddTacheComponent, canActivate: [AuthGuard]},
-  { path: 'login', component: LoginComponent},
-  // **** A update / delete
-  { path: 'register', component: RegisterComponent },
-  { path: 'profile', component: ProfileComponent , canActivate: [AuthGuard]},
-  // Entre les 2 *****
   { path: '', component: HomeComponent},
   { path: 'not-found', component: NotFoundComponent},
   { path: '**', redirectTo: 'not-found'},

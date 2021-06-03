@@ -50,16 +50,13 @@
     </ul>
     <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
       <li class="nav-item">
-        <a routerLink="register" class="nav-link" routerLink="register">Inscription</a>
-      </li>
-      <li class="nav-item">
         <a routerLink="login" class="nav-link" routerLink="login">Connexion</a>
       </li>
     </ul>
 
     <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
       <li class="nav-item">
-        <a routerLink="profile" class="nav-link" routerLink="profile">{{ username }}</a>
+        {{ username }}
       </li>
       <li class="nav-item">
         <a href class="nav-link" (click)="logout()">Deconnexion</a>

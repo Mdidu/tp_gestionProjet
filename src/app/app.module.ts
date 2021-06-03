@@ -24,8 +24,6 @@ import { AddModuleComponent } from './component/modules/add-module/add-module.co
 import { UpdateModuleComponent } from './component/modules/update-module/update-module.component';
 import { AddTacheComponent } from './component/taches/add-tache/add-tache.component';
 import { UpdateTacheComponent } from './component/taches/update-tache/update-tache.component';
-import { RegisterComponent } from './component/register/register/register.component';
-import { ProfileComponent } from './component/profile/profile/profile.component';
 import { authInterceptorProviders } from './helpers/auth.interceptor';
 
 @NgModule({
@@ -49,9 +47,7 @@ import { authInterceptorProviders } from './helpers/auth.interceptor';
     AddModuleComponent,
     UpdateModuleComponent,
     AddTacheComponent,
-    UpdateTacheComponent,
-    RegisterComponent,
-    ProfileComponent
+    UpdateTacheComponent
   ],
   imports: [
     BrowserModule,
